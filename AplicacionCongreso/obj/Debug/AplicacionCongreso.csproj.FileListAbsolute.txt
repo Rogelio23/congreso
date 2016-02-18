@@ -1,0 +1,15 @@
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.exe.config
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.csprojResolveAssemblyReference.cache
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.Inicio.resources
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmParticipante.resources
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.Properties.Resources.resources
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.csproj.GenerateResource.Cache
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.exe
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.pdb
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\MySql.Data.dll
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.exe
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.pdb
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmasistencia.resources
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\Aspose.BarCode.dll
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\BarcodeLib.dll
+C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.grmGenerarCodigoBarra.resources

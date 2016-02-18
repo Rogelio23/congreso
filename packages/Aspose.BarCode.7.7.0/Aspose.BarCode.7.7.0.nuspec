@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aspose.BarCode</id>
+    <version>7.7.0</version>
+    <title>Aspose.BarCode for .NET</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <licenseUrl>http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx</licenseUrl>
+    <projectUrl>http://www.aspose.com/categories/.net-components/aspose.barcode-for-.net/default.aspx</projectUrl>
+    <iconUrl>http://www.aspose.com/images/products/dotnet/Aspose.BarCode_128x128.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Aspose.BarCode for .NET is a robust and reliable barcode generation and recognition component, written in managed C#, it allows developers to quickly and easily add barcode generation and recognition functionality to their Microsoft .NET applications (WinForms, ASP.NET and .NET Compact Framework). 
+       Aspose.BarCode for .NET supports most established barcode standards and barcode specifications. It has the ability to export to multiple image formats including: BMP, EMF, GIF, JPEG, PNG, TIFF and WMF.</description>
+    <summary>Aspose.BarCode for .NET is a robust and reliable barcode generation and recognition component</summary>
+    <releaseNotes>The list of improvements and changes that are being released  in Aspose.BarCode .NET as follows:
+
+New Features
+
+BARCODENET-3426 Add MaxiCode implementation
+
+Enhancements
+
+BARCODENET-34359 Can't recognize Aztec code
+BARCODENET-34352 Recognize 1d barcodes with a heterogeneous brightness
+BARCODENET-34324 Unable to read barcode from image containing graphic in it, unless the graphic is removed from the file
+BARCODENET-34223 Incorrect code and type returned by Aspose.BarCode for Intelligent Mail barcodes
+BARCODENET-34196 Incorrect recognition of the Code128 from the tif image
+BARCODENET-34064 Can't recognize QR code from the PDF document
+BARCODENET-33968 Barcode recognition is returning more bytes
+BARCODENET-33859 Can't recognize unknown codes from tif image
+BARCODENET-33636 Unable to recognize Pdf417 barcode after correct perspective problem
+BARCODENET-18901 EAN and PZN barcodes are not recognized correctly
+BARCODENET-15724 cannot recognize code39 barcode</releaseNotes>
+    <copyright>© Aspose 2002-2012. All Rights Reserved.</copyright>
+    <tags>Aspose.Barcode barcode generation recongnition EAN13 EAN8 UPCA UPCE ISSN ISBN ISMN Interleaved2of5 Standard2of5 MSI Code11 Codabar Postnet Planet EAN14 SCC14 SSCC18 ITF14 IATA2of5 Alpha-Numeric Code128 EAN128 Code39Extended Code39Standard Code93Extended Code93Standard Australia-Post Italian-Post25 Matrix2of5 2D PDF417 DataMatrix Aztec QR SwissPostParcel GS1QR MaxiCode</tags>
+  </metadata>
+</package>
