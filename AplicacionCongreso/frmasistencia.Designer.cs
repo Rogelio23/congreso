@@ -40,6 +40,7 @@
             this.btnLectora = new System.Windows.Forms.Button();
             this.lblEvento = new System.Windows.Forms.Label();
             this.cbEvento = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +118,7 @@
             this.tbLectora.Name = "tbLectora";
             this.tbLectora.Size = new System.Drawing.Size(274, 29);
             this.tbLectora.TabIndex = 6;
+            this.tbLectora.TextChanged += new System.EventHandler(this.tbLectora_TextChanged);
             // 
             // label1
             // 
@@ -165,11 +167,23 @@
             this.cbEvento.Size = new System.Drawing.Size(321, 32);
             this.cbEvento.TabIndex = 9;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(696, 397);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(141, 36);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // frmasistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 486);
+            this.ClientSize = new System.Drawing.Size(942, 486);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cbEvento);
             this.Controls.Add(this.lblEvento);
             this.Controls.Add(this.btnLectora);
@@ -203,6 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoParticipante;
         private System.Windows.Forms.Label lblEvento;
         private System.Windows.Forms.ComboBox cbEvento;
-
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

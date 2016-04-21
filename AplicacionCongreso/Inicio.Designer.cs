@@ -49,6 +49,7 @@
             this.dgvParticipante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParticipante.Size = new System.Drawing.Size(522, 263);
             this.dgvParticipante.TabIndex = 0;
+            this.dgvParticipante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipante_CellContentClick);
             this.dgvParticipante.DoubleClick += new System.EventHandler(this.dgvParticipante_DoubleClick);
             // 
             // tbBuscar
@@ -92,7 +93,7 @@
             // asistenciaToolStripMenuItem1
             // 
             this.asistenciaToolStripMenuItem1.Name = "asistenciaToolStripMenuItem1";
-            this.asistenciaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.asistenciaToolStripMenuItem1.Size = new System.Drawing.Size(127, 22);
             this.asistenciaToolStripMenuItem1.Text = "Asistencia";
             this.asistenciaToolStripMenuItem1.Click += new System.EventHandler(this.asistenciaToolStripMenuItem1_Click);
             // 

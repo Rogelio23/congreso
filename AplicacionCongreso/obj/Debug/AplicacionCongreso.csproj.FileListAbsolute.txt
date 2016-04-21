@@ -13,3 +13,19 @@ C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionC
 C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\Aspose.BarCode.dll
 C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\bin\Debug\BarcodeLib.dll
 C:\Proyecto Congreso\AplicacionCongreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.grmGenerarCodigoBarra.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.exe.config
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.exe
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.pdb
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.exe
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.pdb
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\Aspose.BarCode.dll
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\BarcodeLib.dll
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\MySql.Data.dll
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.csprojResolveAssemblyReference.cache
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmasistencia.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.grmGenerarCodigoBarra.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.Inicio.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmParticipante.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.Properties.Resources.resources
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.csproj.GenerateResource.Cache
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmImpresionTickets.resources

@@ -24,7 +24,7 @@ namespace AplicacionCongreso
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -44,6 +44,11 @@ namespace AplicacionCongreso
         {
             frmasistencia ventanaAsistencia = new frmasistencia();
             ventanaAsistencia.ShowDialog();
+        }
+
+        private void dgvParticipante_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

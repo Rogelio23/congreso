@@ -16,11 +16,11 @@ namespace AplicacionCongreso
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Inicio());
+            //Application.Run(new Inicio());
             //Application.Run(new frmParticipante());
             //Application.Run(new grmGenerarCodigoBarra());
             //Application.Run(new frmasistencia());
-            //
+            Application.Run(new frmImpresionTickets());
         }
     }
 }
