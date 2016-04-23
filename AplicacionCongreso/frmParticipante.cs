@@ -90,7 +90,8 @@ namespace AplicacionCongreso
             {
                 if (validacionParticipante()==true)
                 {
-                    MessageBox.Show("Usted esta borrando"); 
+                    //MessageBox.Show("Usted esta borrando"); 
+                    Controlador.ControladorParticipante.eliminarParticipante(int.Parse(tbParticipanteID.Text));
                 }
                 else
                 {

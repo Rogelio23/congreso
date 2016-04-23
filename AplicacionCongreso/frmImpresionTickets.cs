@@ -114,7 +114,14 @@ namespace AplicacionCongreso
                 //Capture the text
                 if (sender is TextBox)
                 {
-                    dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+                    if (string.IsNullOrWhiteSpace(tbBusqueda.Text)==false)
+                    {
+                        dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+                    }
+                    else
+                    {
+                        dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
+                    }
                 }
             }
         }

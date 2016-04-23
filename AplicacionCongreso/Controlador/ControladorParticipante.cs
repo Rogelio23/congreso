@@ -28,7 +28,7 @@ namespace AplicacionCongreso.Controlador
         public static bool eliminarParticipante(int participanteid)
         {
             bool resultado = false;
-            MySqlCommand comando = new MySqlCommand(string.Format("Delete from Participante where participanteID={0}", participanteid), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete from wp_evr_attendee participanteID="+participanteid+""), ConectionString.ObtenerConexion());
             int query = comando.ExecuteNonQuery();
             if (query != 0) { resultado = true; }
             return resultado;
@@ -46,16 +46,22 @@ namespace AplicacionCongreso.Controlador
             //con el while son introducidos dentro de una lista que servira para rellenar el datagridview
             while (datos.Read())
             {
-                Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
-                participante.ID = datos.GetInt32(0);
-                participante.lname = datos.GetString(1);
-                participante.fname = datos.GetString(2);
-                participante.email = datos.GetString(3);
-                participante.city = datos.GetString(4);
+                //try
+                //{
+                    Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
+                    //participante.ID = datos.GetInt32(0);
+                    participante.lname = datos.GetString(1);
+                    participante.fname = datos.GetString(2);
+                    participante.email = datos.GetString(3);
+                    participante.city = datos.GetString(4);
 
-                
+                    lista.Add(participante);
+                //}
+                //catch (Exception)
+                //{
 
-                lista.Add(participante);
+                //   // throw;
+                //}
             }
             return lista;
         }
@@ -103,6 +109,16 @@ namespace AplicacionCongreso.Controlador
             }
             return lista;
         }
-        
+        public static bool modificareParticipante(Modelos.ModeloParticipante participante)
+        {
+
+            bool resultado = false;
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE wp_evr_attendee (fname, lname,phone,email, event_id, city) values ('{0}','{1}','{2}', '{3}','{4}','{5}')",
+               participante.fname, participante.lname, participante.phone, participante.email, 2, participante.city), ConectionString.ObtenerConexion());
+            int query = comando.ExecuteNonQuery();
+            if (query != 0) { resultado = true; }
+            return resultado;
+        }
+
     }
 }

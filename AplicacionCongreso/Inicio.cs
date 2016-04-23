@@ -29,7 +29,8 @@ namespace AplicacionCongreso
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-          
+            frmasistencia ventanaDeAsistencia = new frmasistencia();
+            ventanaDeAsistencia.ShowDialog();
         }
 
         private void dgvParticipante_DoubleClick(object sender, EventArgs e)
@@ -67,6 +68,12 @@ namespace AplicacionCongreso
         {
             frmParticipante ventanaParticipante = new frmParticipante("Borrar");
             ventanaParticipante.ShowDialog();
+        }
+
+        private void btnTicket_Click(object sender, EventArgs e)
+        {
+            frmImpresionTickets ventanaDeImprmirTickets = new frmImpresionTickets();
+            ventanaDeImprmirTickets.ShowDialog();
         }
     }
 }

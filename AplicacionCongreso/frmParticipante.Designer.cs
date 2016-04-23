@@ -37,7 +37,6 @@
             this.tbCorreo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.tbParticipanteID = new System.Windows.Forms.TextBox();
             this.lblParticipanteID = new System.Windows.Forms.Label();
             this.tbCiudad = new System.Windows.Forms.TextBox();
@@ -120,25 +119,13 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(48, 310);
+            this.btnGuardar.Location = new System.Drawing.Point(131, 310);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(137, 49);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar Participante";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(223, 310);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(137, 49);
-            this.btnEliminar.TabIndex = 15;
-            this.btnEliminar.Text = "Eliminar Participante";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Visible = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // tbParticipanteID
             // 
@@ -187,7 +174,6 @@
             this.ClientSize = new System.Drawing.Size(429, 371);
             this.Controls.Add(this.tbCiudad);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.tbCorreo);
             this.Controls.Add(this.label1);
@@ -217,7 +203,6 @@
         private System.Windows.Forms.TextBox tbCorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox tbParticipanteID;
         private System.Windows.Forms.Label lblParticipanteID;
         private System.Windows.Forms.TextBox tbCiudad;
