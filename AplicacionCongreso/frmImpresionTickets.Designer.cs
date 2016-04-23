@@ -37,15 +37,18 @@
             this.pbCodigo = new System.Windows.Forms.PictureBox();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.tbBusqueda = new System.Windows.Forms.TextBox();
+            this.btnPrueba = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCodigo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvParticipante
             // 
+            this.dgvParticipante.AllowUserToOrderColumns = true;
             this.dgvParticipante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvParticipante.Location = new System.Drawing.Point(21, 57);
             this.dgvParticipante.Name = "dgvParticipante";
+            this.dgvParticipante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParticipante.Size = new System.Drawing.Size(759, 209);
             this.dgvParticipante.TabIndex = 0;
             // 
@@ -107,7 +110,7 @@
             // btnImprimir
             // 
             this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(390, 331);
+            this.btnImprimir.Location = new System.Drawing.Point(385, 331);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(200, 92);
             this.btnImprimir.TabIndex = 11;
@@ -122,12 +125,28 @@
             this.tbBusqueda.Name = "tbBusqueda";
             this.tbBusqueda.Size = new System.Drawing.Size(759, 26);
             this.tbBusqueda.TabIndex = 12;
+            this.tbBusqueda.TextChanged += new System.EventHandler(this.tbBusqueda_TextChanged);
+            this.tbBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbBusqueda_KeyDown);
+            this.tbBusqueda.Validating += new System.ComponentModel.CancelEventHandler(this.tbBusqueda_Validating);
+            this.tbBusqueda.Validated += new System.EventHandler(this.tbBusqueda_Validated);
+            // 
+            // btnPrueba
+            // 
+            this.btnPrueba.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrueba.Location = new System.Drawing.Point(591, 331);
+            this.btnPrueba.Name = "btnPrueba";
+            this.btnPrueba.Size = new System.Drawing.Size(189, 92);
+            this.btnPrueba.TabIndex = 13;
+            this.btnPrueba.Text = "Imprimir Selección";
+            this.btnPrueba.UseVisualStyleBackColor = true;
+            this.btnPrueba.Click += new System.EventHandler(this.btnPrueba_Click);
             // 
             // frmImpresionTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 500);
+            this.Controls.Add(this.btnPrueba);
             this.Controls.Add(this.tbBusqueda);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.pbCodigo);
@@ -158,5 +177,6 @@
         private System.Windows.Forms.PictureBox pbCodigo;
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.TextBox tbBusqueda;
+        private System.Windows.Forms.Button btnPrueba;
     }
 }

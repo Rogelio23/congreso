@@ -37,15 +37,19 @@ namespace AplicacionCongreso
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            foreach(DataGridViewRow renglon in dgvParticipante.Rows)
-            {
-                tbNombre.Text = (string)renglon.Cells[2].Value;
-                tbApellido.Text = (string)renglon.Cells[1].Value;
-                codigo = (int)renglon.Cells[0].Value;
-                Herramientas.ImprimirCodigo(codigo, pbCodigo);
-                Imprimir_Solicitud();
-                
-            }
+            
+                foreach (DataGridViewRow renglon in dgvParticipante.Rows)
+                {
+                    tbNombre.Text = (string)renglon.Cells[2].Value;
+                    tbApellido.Text = (string)renglon.Cells[1].Value;
+                    codigo = (int)renglon.Cells[0].Value;
+                    Herramientas.ImprimirCodigo(codigo, pbCodigo);
+                    Imprimir_Solicitud();
+
+                } 
+
+            
+            
         }
         public void Datos_Cliente(object obj, PrintPageEventArgs ev)
         {
@@ -83,6 +87,58 @@ namespace AplicacionCongreso
             if (result == DialogResult.OK)
             {
                 formulario.Print();
+            }
+        }
+
+        private void tbBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            //dgvParticipante.DataSource= Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+        }
+
+        private void tbBusqueda_Validated(object sender, EventArgs e)
+        {
+            //dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+        }
+
+        private void tbBusqueda_Validating(object sender, CancelEventArgs e)
+        {
+            //dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+        }
+
+        private void tbBusqueda_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Enter key is down
+
+                //Capture the text
+                if (sender is TextBox)
+                {
+                    dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipanteByNombre(tbBusqueda.Text);
+                }
+            }
+        }
+
+        private void btnPrueba_Click(object sender, EventArgs e)
+        {
+            //foreach (DataGridViewRow seleccion in dgvParticipante.SelectedRows)
+            //{
+            //    MessageBox.Show(seleccion.Cells[2].Value.ToString());
+                
+            //}
+            
+            if (dgvParticipante.SelectedRows.Count < dgvParticipante.RowCount)
+            {
+                foreach (DataGridViewRow renglon in dgvParticipante.SelectedRows)
+                {
+                    tbNombre.Text = (string)renglon.Cells[2].Value;
+                    tbApellido.Text = (string)renglon.Cells[1].Value;
+                    codigo = (int)renglon.Cells[0].Value;
+                    Herramientas.ImprimirCodigo(codigo, pbCodigo);
+                    Imprimir_Solicitud();
+
+                }
+                
             }
         }
     }

@@ -14,8 +14,8 @@ namespace AplicacionCongreso.Controlador
         {
 
             bool resultado = false;
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into Participante (participanteID, nombreParticipante, apellidoMaterno,tel,correo,pagado) values ('{0}','{1}','{2}', '{3}','{4}','{5}','{6}')",
-               participante.ID, participante.fname, participante.lname, participante.phone, participante.email, 1), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("Insert into wp_evr_attendee (fname, lname,phone,email, event_id, city) values ('{0}','{1}','{2}', '{3}','{4}','{5}')",
+               participante.fname, participante.lname, participante.phone, participante.email, 2, participante.city), ConectionString.ObtenerConexion());
             int query = comando.ExecuteNonQuery();
             if (query != 0) { resultado = true; }
             return resultado;
@@ -50,30 +50,59 @@ namespace AplicacionCongreso.Controlador
                 participante.ID = datos.GetInt32(0);
                 participante.lname = datos.GetString(1);
                 participante.fname = datos.GetString(2);
-                participante.address = datos.GetString(3);
+                participante.email = datos.GetString(3);
                 participante.city = datos.GetString(4);
+
                 
 
                 lista.Add(participante);
             }
             return lista;
         }
-        //public static Modelos.ModeloParticipante ObtenerParticipante(int id)
-        //{
-        //    Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
-        //    MySqlCommand comando = new MySqlCommand(string.Format("SELECT *FROM wp_evr_attendee WHERE ID={0}", id), ConectionString.ObtenerConexion());
-        //    MySqlDataReader datos = comando.ExecuteReader();
-        //    while (datos.Read())
-        //    {
-        //        participante.ID = datos.GetInt32(0);
-        //        participante.fname = datos.GetString(1);
-        //        participante.lname = datos.GetString(2);
-        //        //participante.apellidoMaterno = datos.GetString(3);
-        //        participante.phone = datos.GetInt32(3);
-        //        participante.email = datos.GetString(4); 
-        //    }
-        //    ConectionString.ObtenerConexion().Close();
-        //    return participante;
-        //}
+        public static Modelos.ModeloParticipante ObtenerParticipante(int id)
+        {
+            Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT *FROM wp_evr_attendee WHERE ID={0}", id), ConectionString.ObtenerConexion());
+            MySqlDataReader datos = comando.ExecuteReader();
+            while (datos.Read())
+            {
+                //participante.ID = datos.GetInt32(0);
+                participante.fname = datos.GetString(1);
+                participante.lname = datos.GetString(2);
+                participante.phone = datos.GetString(9);
+                participante.email = datos.GetString(8);
+                participante.city = datos.GetString(4);
+                
+            }
+            ConectionString.ObtenerConexion().Close();
+            return participante;
+        }
+
+        /// <summary>
+        /// Metodo Fill que arroja todos los campos de la tabla de participantes
+        /// </summary>
+        /// <returns></returns>
+        public static List<Modelos.ModeloParticipante> FillParticipanteByNombre(string lastName)
+        {
+            List<Modelos.ModeloParticipante> lista = new List<Modelos.ModeloParticipante>();
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM  wp_evr_attendee WHERE event_id='2' and lname like '%" + lastName+"%'"), ConectionString.ObtenerConexion());
+            MySqlDataReader datos = comando.ExecuteReader();
+            //todos los datos de la consulta select son arrojados dentro de un objeto tipo MySQLcommand
+            //con el while son introducidos dentro de una lista que servira para rellenar el datagridview
+            while (datos.Read())
+            {
+                Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
+                participante.ID = datos.GetInt32(0);
+                participante.lname = datos.GetString(1);
+                participante.fname = datos.GetString(2);
+                participante.address = datos.GetString(3);
+                participante.city = datos.GetString(4);
+
+
+                lista.Add(participante);
+            }
+            return lista;
+        }
+        
     }
 }

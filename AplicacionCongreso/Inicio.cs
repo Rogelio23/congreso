@@ -19,12 +19,12 @@ namespace AplicacionCongreso
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
+            //dgvParticipanteataSou.Drce = Controlador.ControladorParticipante.FillParticipante();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
+            //dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -35,9 +35,9 @@ namespace AplicacionCongreso
         private void dgvParticipante_DoubleClick(object sender, EventArgs e)
         {
 
-            int participanteID= Herramientas.dgvValorInt(dgvParticipante, 0, 0);
-            frmParticipante ventanaParticipante = new frmParticipante(participanteID);
-            ventanaParticipante.ShowDialog();
+            //int participanteID= Herramientas.dgvValorInt(dgvParticipante, 0, 0);
+            //frmParticipante ventanaParticipante = new frmParticipante();
+            //ventanaParticipante.ShowDialog();
         }
 
         private void asistenciaToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,6 +49,24 @@ namespace AplicacionCongreso
         private void dgvParticipante_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnNuevoParticipante_Click(object sender, EventArgs e)
+        {
+            frmParticipante ventanaParticipante = new frmParticipante("Nuevo");
+            ventanaParticipante.ShowDialog();
+        }
+
+        private void btnModificarParticipante_Click(object sender, EventArgs e)
+        {
+            frmParticipante ventanaParticipante = new frmParticipante("Modificar");
+            ventanaParticipante.ShowDialog();
+        }
+
+        private void btnBorrarParticipante_Click(object sender, EventArgs e)
+        {
+            frmParticipante ventanaParticipante = new frmParticipante("Borrar");
+            ventanaParticipante.ShowDialog();
         }
     }
 }

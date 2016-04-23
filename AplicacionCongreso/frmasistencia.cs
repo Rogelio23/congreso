@@ -25,7 +25,7 @@ namespace AplicacionCongreso
 
         private void btnLectora_Click(object sender, EventArgs e)
         {
-            tbParticipante.Text = tbLectora.Text;
+            //tbParticipante.Text = tbLectora2.Text;
         }
 
         private void tbParticipante_TextChanged(object sender, EventArgs e)
@@ -91,10 +91,55 @@ namespace AplicacionCongreso
                         
         }
 
-        private void tbLectora_TextChanged(object sender, EventArgs e)
+        private void tbLectora2_TextChanged(object sender, EventArgs e)
         {
-            tbParticipante.Text = tbLectora.Text;
-            tbLectora.Text = "";
+
+        }
+
+        private void dgvAsistencia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tbLectora_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Enter key is down
+
+                //Capture the text
+                if (sender is TextBox)
+                {
+                    tbParticipante.Text = tbLectora.Text;
+                    Modelos.ModeloAsistencia asistencia = new Modelos.ModeloAsistencia();
+                    asistencia.participante = int.Parse(tbParticipante.Text);
+                    asistencia.evento = cbEvento.SelectedItem.ToString();
+                    asistencia.congreso = "CongresoParamedicos";
+                    Controlador.ControladorAsistencia.agregarParticipante(asistencia);
+                    tbLectora.Text = "";
+                }
+            }
+        }
+
+        private void tbBorrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Enter key is down
+
+                //Capture the text
+                if (sender is TextBox)
+                {
+                    
+                    Controlador.ControladorAsistencia.eliminarAsistencia(int.Parse(tbBorrar.Text), cbEvento.SelectedItem.ToString());
+                    tbBorrar.Text = "";
+                }
+            }
+        }
+
+        private void cbEvento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

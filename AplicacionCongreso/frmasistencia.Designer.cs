@@ -37,10 +37,10 @@
             this.apellidoParticipante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbLectora = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLectora = new System.Windows.Forms.Button();
             this.lblEvento = new System.Windows.Forms.Label();
             this.cbEvento = new System.Windows.Forms.ComboBox();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.tbBorrar = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.dgvParticipante.Name = "dgvParticipante";
             this.dgvParticipante.ReadOnly = true;
             this.dgvParticipante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParticipante.Size = new System.Drawing.Size(369, 263);
+            this.dgvParticipante.Size = new System.Drawing.Size(405, 263);
             this.dgvParticipante.TabIndex = 1;
             this.dgvParticipante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParticipante_CellContentClick);
             // 
@@ -92,6 +92,7 @@
             this.dgvAsistencia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAsistencia.Size = new System.Drawing.Size(369, 263);
             this.dgvAsistencia.TabIndex = 4;
+            this.dgvAsistencia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsistencia_CellContentClick);
             // 
             // participanteID
             // 
@@ -114,11 +115,11 @@
             // tbLectora
             // 
             this.tbLectora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbLectora.Location = new System.Drawing.Point(143, 397);
+            this.tbLectora.Location = new System.Drawing.Point(107, 397);
             this.tbLectora.Name = "tbLectora";
             this.tbLectora.Size = new System.Drawing.Size(274, 29);
             this.tbLectora.TabIndex = 6;
-            this.tbLectora.TextChanged += new System.EventHandler(this.tbLectora_TextChanged);
+            this.tbLectora.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbLectora_KeyDown);
             // 
             // label1
             // 
@@ -126,20 +127,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 396);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 24);
+            this.label1.Size = new System.Drawing.Size(83, 24);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Participante:";
-            // 
-            // btnLectora
-            // 
-            this.btnLectora.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLectora.Location = new System.Drawing.Point(441, 397);
-            this.btnLectora.Name = "btnLectora";
-            this.btnLectora.Size = new System.Drawing.Size(141, 36);
-            this.btnLectora.TabIndex = 7;
-            this.btnLectora.Text = "Leer";
-            this.btnLectora.UseVisualStyleBackColor = true;
-            this.btnLectora.Click += new System.EventHandler(this.btnLectora_Click);
+            this.label1.Text = "Agregar:";
             // 
             // lblEvento
             // 
@@ -166,27 +156,36 @@
             this.cbEvento.Name = "cbEvento";
             this.cbEvento.Size = new System.Drawing.Size(321, 32);
             this.cbEvento.TabIndex = 9;
+            this.cbEvento.SelectedIndexChanged += new System.EventHandler(this.cbEvento_SelectedIndexChanged);
             // 
-            // btnGuardar
+            // tbBorrar
             // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(696, 397);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(141, 36);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.tbBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBorrar.Location = new System.Drawing.Point(107, 446);
+            this.tbBorrar.Name = "tbBorrar";
+            this.tbBorrar.Size = new System.Drawing.Size(274, 29);
+            this.tbBorrar.TabIndex = 14;
+            this.tbBorrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbBorrar_KeyDown);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 445);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 24);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Borrar:";
             // 
             // frmasistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(942, 486);
-            this.Controls.Add(this.btnGuardar);
+            this.ClientSize = new System.Drawing.Size(942, 511);
+            this.Controls.Add(this.tbBorrar);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEvento);
             this.Controls.Add(this.lblEvento);
-            this.Controls.Add(this.btnLectora);
             this.Controls.Add(this.tbLectora);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvAsistencia);
@@ -211,12 +210,12 @@
         private System.Windows.Forms.DataGridView dgvAsistencia;
         private System.Windows.Forms.TextBox tbLectora;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLectora;
         private System.Windows.Forms.DataGridViewTextBoxColumn participanteID;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreParticipante;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidoParticipante;
         private System.Windows.Forms.Label lblEvento;
         private System.Windows.Forms.ComboBox cbEvento;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.TextBox tbBorrar;
+        private System.Windows.Forms.Label label3;
     }
 }
