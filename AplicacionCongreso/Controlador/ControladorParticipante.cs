@@ -49,7 +49,7 @@ namespace AplicacionCongreso.Controlador
                 //try
                 //{
                     Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
-                    //participante.ID = datos.GetInt32(0);
+                    participante.ID = datos.GetInt32(0);
                     participante.lname = datos.GetString(1);
                     participante.fname = datos.GetString(2);
                     participante.email = datos.GetString(3);
