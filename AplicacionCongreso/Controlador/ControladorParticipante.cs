@@ -78,6 +78,7 @@ namespace AplicacionCongreso.Controlador
                 participante.phone = datos.GetString(9);
                 participante.email = datos.GetString(8);
                 participante.city = datos.GetString(4);
+
                 
             }
             ConectionString.ObtenerConexion().Close();
