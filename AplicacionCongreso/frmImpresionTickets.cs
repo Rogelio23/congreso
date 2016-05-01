@@ -40,8 +40,8 @@ namespace AplicacionCongreso
             
                 foreach (DataGridViewRow renglon in dgvParticipante.Rows)
                 {
-                    tbNombre.Text = (string)renglon.Cells[2].Value;
-                    tbApellido.Text = (string)renglon.Cells[1].Value;
+                    tbNombre.Text = ((string)renglon.Cells[2].Value).ToString().ToUpperInvariant();
+                    tbApellido.Text = ((string)renglon.Cells[1].Value).ToString().ToUpperInvariant();
                     codigo = (int)renglon.Cells[0].Value;
                     Herramientas.ImprimirCodigo(codigo, pbCodigo);
                     Imprimir_Solicitud();
@@ -138,8 +138,8 @@ namespace AplicacionCongreso
             {
                 foreach (DataGridViewRow renglon in dgvParticipante.SelectedRows)
                 {
-                    tbNombre.Text = (string)renglon.Cells[2].Value;
-                    tbApellido.Text = (string)renglon.Cells[1].Value;
+                    tbNombre.Text = ((string)renglon.Cells[2].Value).ToString().ToUpperInvariant();
+                    tbApellido.Text = ((string)renglon.Cells[1].Value).ToString().ToUpperInvariant();
                     codigo = (int)renglon.Cells[0].Value;
                     Herramientas.ImprimirCodigo(codigo, pbCodigo);
                     Imprimir_Solicitud();
