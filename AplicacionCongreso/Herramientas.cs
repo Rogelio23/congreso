@@ -7,6 +7,9 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Net.Mail;
 using System.IO;
+using System.Drawing.Imaging;
+
+using System.Drawing.Printing;
 
 namespace AplicacionCongreso
 {
@@ -42,5 +45,35 @@ namespace AplicacionCongreso
             int valor = (int)filaseleccionada.Cells[cell].Value;
             return valor;
         }
+
+        /// <summary>
+        /// Herramienta que sirve para realizar los codigos de barra
+        /// </summary>
+        /// <param name="codigoRecibido"></param>
+        public static void ImprimirCodigo (int codigoRecibido, PictureBox pbResultado)
+        {
+            string codigoBarras = codigoRecibido.ToString();
+            //string codigoBarras = tbCodigo.Text;
+            Bitmap codigo = new Bitmap(codigoBarras.Length * 60, 150); //Esta parte de aqui controla lo que se muestra en el picture box
+            using (Graphics graficos = Graphics.FromImage(codigo))
+            {
+                Font oFont = new System.Drawing.Font("IDAHC39M Code 39 Barcode", 23);
+
+                PointF punto = new PointF(2f, 2f);
+                SolidBrush negro = new SolidBrush(Color.Black);
+                SolidBrush blanco = new SolidBrush(Color.White);
+                graficos.FillRectangle(blanco, 0, 0, codigo.Width, codigo.Height);
+                graficos.DrawString("*" + codigoBarras + "*", oFont, negro, punto);
+            }
+            using (MemoryStream ms = new MemoryStream())
+            {
+                codigo.Save(ms, ImageFormat.Png);
+                pbResultado.Image = codigo;
+                pbResultado.Height = codigo.Height;
+                pbResultado.Width = codigo.Width;
+            }
+        }
+        
+
     }
 }

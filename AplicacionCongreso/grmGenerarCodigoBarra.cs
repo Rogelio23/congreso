@@ -21,7 +21,7 @@ namespace AplicacionCongreso
         string Nombre;
         string Direccion;
         string Telefono;
-        Font fuente = new Font("Arial", 12);
+        Font fuente = new Font("Arial", 12);// estaba en 12
 
         public grmGenerarCodigoBarra()
         {
@@ -31,25 +31,26 @@ namespace AplicacionCongreso
         private void btnGenerador_Click(object sender, EventArgs e)
         {
 
-            string codigoBarras = tbCodigo.Text;
-            Bitmap codigo = new Bitmap(codigoBarras.Length * 40, 150);
-            using (Graphics graficos=Graphics.FromImage(codigo))
-            {
-                Font oFont = new System.Drawing.Font("IDAHC39M Code 39 Barcode", 20);
-                
-                PointF punto = new PointF(2f, 2f); 
-                SolidBrush negro=new SolidBrush(Color.Black);
-                SolidBrush blanco = new SolidBrush(Color.White);
-                graficos.FillRectangle(blanco,0,0,codigo.Width,codigo.Height);
-                graficos.DrawString("*" + codigoBarras + "*", oFont, negro, punto);
-            }
-            using (MemoryStream ms = new MemoryStream())
-            {
-                codigo.Save(ms, ImageFormat.Png);
-                pbResultado.Image = codigo;
-                pbResultado.Height = codigo.Height;
-                pbResultado.Width = codigo.Width;
-            }
+            //string codigoBarras = tbCodigo.Text;
+            //Bitmap codigo = new Bitmap(codigoBarras.Length * 60, 150); //Esta parte de aqui controla lo que se muestra en el picture box
+            //using (Graphics graficos=Graphics.FromImage(codigo))
+            //{
+            //    Font oFont = new System.Drawing.Font("IDAHC39M Code 39 Barcode", 23);
+
+            //    PointF punto = new PointF(2f, 2f); 
+            //    SolidBrush negro=new SolidBrush(Color.Black);
+            //    SolidBrush blanco = new SolidBrush(Color.White);
+            //    graficos.FillRectangle(blanco,0,0,codigo.Width,codigo.Height);
+            //    graficos.DrawString("*" + codigoBarras + "*", oFont, negro, punto);
+            //}
+            //using (MemoryStream ms = new MemoryStream())
+            //{
+            //    codigo.Save(ms, ImageFormat.Png);
+            //    pbResultado.Image = codigo;
+            //    pbResultado.Height = codigo.Height;
+            //    pbResultado.Width = codigo.Width;
+            //}
+            Herramientas.ImprimirCodigo(int.Parse(tbCodigo.Text), pbResultado);
         }
 
         private void grmGenerarCodigoBarra_Load(object sender, EventArgs e)
@@ -94,8 +95,8 @@ private void Datos_Cliente(object obj, PrintPageEventArgs ev)
     ev.Graphics.DrawString(Nombre,fuente,Brushes.Black,pos_x+65,pos_y,new StringFormat());
     ev.Graphics.DrawString(Direccion, fuente, Brushes.Black, pos_x+75, pos_y+15, new StringFormat());
     ev.Graphics.DrawString(Telefono, fuente, Brushes.Black, pos_x+80, pos_y+30, new StringFormat());
-    ev.Graphics.DrawImage(pbResultado.Image, -8, 150, 200, 100);
-    // para imprimir el codigo: (X,Y,Alto,Ancho)
+    ev.Graphics.DrawImage(pbResultado.Image, -8, 150, 200, 150);
+    // para imprimir el codigo: (X,Y,Ancho,Alto)
     //madkmadfmasdff
 }
 

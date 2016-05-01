@@ -28,103 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvParticipante = new System.Windows.Forms.DataGridView();
-            this.tbBuscar = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.asistenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asistenciaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.btnAisistencia = new System.Windows.Forms.Button();
+            this.btnNuevoParticipante = new System.Windows.Forms.Button();
+            this.btnModificarParticipante = new System.Windows.Forms.Button();
+            this.btnBorrarParticipante = new System.Windows.Forms.Button();
+            this.btnTicket = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dgvParticipante
+            // btnAisistencia
             // 
-            this.dgvParticipante.AllowUserToAddRows = false;
-            this.dgvParticipante.AllowUserToDeleteRows = false;
-            this.dgvParticipante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParticipante.Location = new System.Drawing.Point(52, 90);
-            this.dgvParticipante.Name = "dgvParticipante";
-            this.dgvParticipante.ReadOnly = true;
-            this.dgvParticipante.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParticipante.Size = new System.Drawing.Size(522, 263);
-            this.dgvParticipante.TabIndex = 0;
-            this.dgvParticipante.DoubleClick += new System.EventHandler(this.dgvParticipante_DoubleClick);
+            this.btnAisistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAisistencia.Location = new System.Drawing.Point(132, 129);
+            this.btnAisistencia.Name = "btnAisistencia";
+            this.btnAisistencia.Size = new System.Drawing.Size(103, 55);
+            this.btnAisistencia.TabIndex = 2;
+            this.btnAisistencia.Text = "Asistencia:";
+            this.btnAisistencia.UseVisualStyleBackColor = true;
+            this.btnAisistencia.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // tbBuscar
+            // btnNuevoParticipante
             // 
-            this.tbBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbBuscar.Location = new System.Drawing.Point(52, 48);
-            this.tbBuscar.Name = "tbBuscar";
-            this.tbBuscar.Size = new System.Drawing.Size(407, 26);
-            this.tbBuscar.TabIndex = 1;
-            this.tbBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnNuevoParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoParticipante.Location = new System.Drawing.Point(249, 129);
+            this.btnNuevoParticipante.Name = "btnNuevoParticipante";
+            this.btnNuevoParticipante.Size = new System.Drawing.Size(113, 55);
+            this.btnNuevoParticipante.TabIndex = 4;
+            this.btnNuevoParticipante.Text = "Nuevo Participante";
+            this.btnNuevoParticipante.UseVisualStyleBackColor = true;
+            this.btnNuevoParticipante.Click += new System.EventHandler(this.btnNuevoParticipante_Click);
             // 
-            // btnBuscar
+            // btnModificarParticipante
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(483, 43);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(90, 35);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnModificarParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarParticipante.Location = new System.Drawing.Point(376, 129);
+            this.btnModificarParticipante.Name = "btnModificarParticipante";
+            this.btnModificarParticipante.Size = new System.Drawing.Size(103, 55);
+            this.btnModificarParticipante.TabIndex = 5;
+            this.btnModificarParticipante.Text = "Modificar Participante:";
+            this.btnModificarParticipante.UseVisualStyleBackColor = true;
+            this.btnModificarParticipante.Click += new System.EventHandler(this.btnModificarParticipante_Click);
             // 
-            // menuStrip1
+            // btnBorrarParticipante
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asistenciaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(609, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btnBorrarParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarParticipante.Location = new System.Drawing.Point(493, 129);
+            this.btnBorrarParticipante.Name = "btnBorrarParticipante";
+            this.btnBorrarParticipante.Size = new System.Drawing.Size(103, 55);
+            this.btnBorrarParticipante.TabIndex = 6;
+            this.btnBorrarParticipante.Text = "Borrar Participante:";
+            this.btnBorrarParticipante.UseVisualStyleBackColor = true;
+            this.btnBorrarParticipante.Click += new System.EventHandler(this.btnBorrarParticipante_Click);
             // 
-            // asistenciaToolStripMenuItem
+            // btnTicket
             // 
-            this.asistenciaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asistenciaToolStripMenuItem1});
-            this.asistenciaToolStripMenuItem.Name = "asistenciaToolStripMenuItem";
-            this.asistenciaToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.asistenciaToolStripMenuItem.Text = "Asistencia";
-            // 
-            // asistenciaToolStripMenuItem1
-            // 
-            this.asistenciaToolStripMenuItem1.Name = "asistenciaToolStripMenuItem1";
-            this.asistenciaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.asistenciaToolStripMenuItem1.Text = "Asistencia";
-            this.asistenciaToolStripMenuItem1.Click += new System.EventHandler(this.asistenciaToolStripMenuItem1_Click);
+            this.btnTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTicket.Location = new System.Drawing.Point(610, 129);
+            this.btnTicket.Name = "btnTicket";
+            this.btnTicket.Size = new System.Drawing.Size(103, 55);
+            this.btnTicket.TabIndex = 7;
+            this.btnTicket.Text = "Generador de Tickets";
+            this.btnTicket.UseVisualStyleBackColor = true;
+            this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 448);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.tbBuscar);
-            this.Controls.Add(this.dgvParticipante);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(819, 448);
+            this.Controls.Add(this.btnTicket);
+            this.Controls.Add(this.btnBorrarParticipante);
+            this.Controls.Add(this.btnModificarParticipante);
+            this.Controls.Add(this.btnNuevoParticipante);
+            this.Controls.Add(this.btnAisistencia);
             this.Name = "Inicio";
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Inicio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvParticipante;
-        private System.Windows.Forms.TextBox tbBuscar;
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem asistenciaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asistenciaToolStripMenuItem1;
+        private System.Windows.Forms.Button btnAisistencia;
+        private System.Windows.Forms.Button btnNuevoParticipante;
+        private System.Windows.Forms.Button btnModificarParticipante;
+        private System.Windows.Forms.Button btnBorrarParticipante;
+        private System.Windows.Forms.Button btnTicket;
     }
 }
 

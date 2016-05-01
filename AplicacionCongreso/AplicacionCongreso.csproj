@@ -55,12 +55,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConectionString.cs" />
+    <Compile Include="Controlador\ControladorAsistencia.cs" />
     <Compile Include="Controlador\ControladorParticipante.cs" />
     <Compile Include="frmasistencia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmasistencia.Designer.cs">
       <DependentUpon>frmasistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImpresionTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImpresionTickets.Designer.cs">
+      <DependentUpon>frmImpresionTickets.cs</DependentUpon>
     </Compile>
     <Compile Include="grmGenerarCodigoBarra.cs">
       <SubType>Form</SubType>
@@ -81,11 +88,15 @@
     <Compile Include="frmParticipante.Designer.cs">
       <DependentUpon>frmParticipante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\ModeloAsistencia.cs" />
     <Compile Include="Modelos\ModeloParticipante.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmasistencia.resx">
       <DependentUpon>frmasistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImpresionTickets.resx">
+      <DependentUpon>frmImpresionTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="grmGenerarCodigoBarra.resx">
       <DependentUpon>grmGenerarCodigoBarra.cs</DependentUpon>

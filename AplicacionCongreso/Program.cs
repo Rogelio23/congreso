@@ -20,7 +20,7 @@ namespace AplicacionCongreso
             //Application.Run(new frmParticipante());
             //Application.Run(new grmGenerarCodigoBarra());
             //Application.Run(new frmasistencia());
-            //
+            //Application.Run(new frmImpresionTickets());
         }
     }
 }
