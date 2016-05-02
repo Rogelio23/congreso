@@ -75,5 +75,11 @@ namespace AplicacionCongreso
             frmImpresionTickets ventanaDeImprmirTickets = new frmImpresionTickets();
             ventanaDeImprmirTickets.ShowDialog();
         }
+
+        private void btnResultados_Click(object sender, EventArgs e)
+        {
+            frmResultadosAsistencia ventanaVista = new frmResultadosAsistencia();
+            ventanaVista.ShowDialog();
+        }
     }
 }

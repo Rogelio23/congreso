@@ -50,3 +50,9 @@ C:\Users\RafaelGibran\Source\Repos\congreso\AplicacionCongreso\obj\Debug\Aplicac
 C:\Users\RafaelGibran\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.TrustInfo.xml
 C:\Users\RafaelGibran\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.exe.manifest
 C:\Users\RafaelGibran\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.application
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.exe.manifest
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\bin\Debug\AplicacionCongreso.application
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.TrustInfo.xml
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.exe.manifest
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.application
+C:\Users\Hal\Source\Repos\congreso\AplicacionCongreso\obj\Debug\AplicacionCongreso.frmResultadosAsistencia.resources

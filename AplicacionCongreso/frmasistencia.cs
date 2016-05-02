@@ -110,13 +110,21 @@ namespace AplicacionCongreso
                 //Capture the text
                 if (sender is TextBox)
                 {
-                    tbParticipante.Text = tbLectora.Text;
-                    Modelos.ModeloAsistencia asistencia = new Modelos.ModeloAsistencia();
-                    asistencia.participante = int.Parse(tbParticipante.Text);
-                    asistencia.evento = cbEvento.SelectedItem.ToString();
-                    asistencia.congreso = "CongresoParamedicos";
-                    Controlador.ControladorAsistencia.agregarParticipante(asistencia);
-                    tbLectora.Text = "";
+                    if (string.IsNullOrWhiteSpace(cbEvento.Text)==false)
+                    {
+                        tbParticipante.Text = tbLectora.Text;
+                        Modelos.ModeloAsistencia asistencia = new Modelos.ModeloAsistencia();
+                        asistencia.participante = int.Parse(tbParticipante.Text);
+                        asistencia.evento = cbEvento.SelectedItem.ToString();
+                        asistencia.congreso = "CongresoParamedicos";
+                        Controlador.ControladorAsistencia.agregarParticipante(asistencia);
+                        tbLectora.Text = ""; 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una opcion en el evento");
+                        tbLectora.Text = "";
+                    }
                 }
             }
         }

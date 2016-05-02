@@ -91,6 +91,7 @@
     <Compile Include="ConectionString.cs" />
     <Compile Include="Controlador\ControladorAsistencia.cs" />
     <Compile Include="Controlador\ControladorParticipante.cs" />
+    <Compile Include="Controlador\ControladorVista.cs" />
     <Compile Include="frmasistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +103,12 @@
     </Compile>
     <Compile Include="frmImpresionTickets.Designer.cs">
       <DependentUpon>frmImpresionTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmResultadosAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResultadosAsistencia.Designer.cs">
+      <DependentUpon>frmResultadosAsistencia.cs</DependentUpon>
     </Compile>
     <Compile Include="grmGenerarCodigoBarra.cs">
       <SubType>Form</SubType>
@@ -124,6 +131,7 @@
     </Compile>
     <Compile Include="Modelos\ModeloAsistencia.cs" />
     <Compile Include="Modelos\ModeloParticipante.cs" />
+    <Compile Include="Modelos\ModeloVistaAsistencia.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmasistencia.resx">
@@ -131,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmImpresionTickets.resx">
       <DependentUpon>frmImpresionTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResultadosAsistencia.resx">
+      <DependentUpon>frmResultadosAsistencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="grmGenerarCodigoBarra.resx">
       <DependentUpon>grmGenerarCodigoBarra.cs</DependentUpon>
