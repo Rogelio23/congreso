@@ -189,5 +189,10 @@ namespace AplicacionCongreso
                 lblCantidad.ForeColor = Color.Red;
             }
         }
+
+        private void tbBorrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

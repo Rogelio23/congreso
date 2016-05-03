@@ -27,11 +27,45 @@ namespace AplicacionCongreso.Controlador
                 
                 vista.lname = datos.GetString(0);
                 vista.fname = datos.GetString(1);
-                vista.event_id = datos.GetString(2);
+                vista.event_id = datos.GetString(3);
+                
+                
                 //vista.evento = datos.GetString(3);
                 try
                 {
-                    vista.evento = datos.GetString(3);
+                    vista.evento = datos.GetString(2);
+                }
+                catch (Exception)
+                {
+
+                    vista.evento = "_";
+                }
+                vista.participanteID = datos.GetInt32(4);
+                lista.Add(vista);
+                                
+            }
+            return lista;
+        }
+
+        public static List<Modelos.ModeloVistaAsistencia> FillVistaAsistenciaConEvento(string nomEvento)
+        {
+            List<Modelos.ModeloVistaAsistencia> lista = new List<Modelos.ModeloVistaAsistencia>();
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM vistaAsitentesCongreso where event_id=2 and evento like '%" + nomEvento + "%';"), ConectionString.ObtenerConexion());
+            MySqlDataReader datos = comando.ExecuteReader();
+            //todos los datos de la consulta select son arrojados dentro de un objeto tipo MySQLcommand
+            //con el while son introducidos dentro de una lista que servira para rellenar el datagridview
+            while (datos.Read())
+            {
+
+                Modelos.ModeloVistaAsistencia vista = new Modelos.ModeloVistaAsistencia();
+
+                vista.lname = datos.GetString(0);
+                vista.fname = datos.GetString(1);
+                vista.event_id = datos.GetString(3);
+                //vista.evento = datos.GetString(3);
+                try
+                {
+                    vista.evento = datos.GetString(2);
                 }
                 catch (Exception)
                 {
@@ -39,10 +73,12 @@ namespace AplicacionCongreso.Controlador
                     vista.evento = "_";
                 }
                 lista.Add(vista);
-                                
+                vista.participanteID = datos.GetInt32(4);
             }
             return lista;
         }
+
+
     }
 }
 //SELECT * FROM  vistaAsitentesCongreso WHERE event_id='2'

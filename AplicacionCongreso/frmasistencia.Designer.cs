@@ -168,6 +168,7 @@
             this.tbBorrar.Name = "tbBorrar";
             this.tbBorrar.Size = new System.Drawing.Size(274, 29);
             this.tbBorrar.TabIndex = 14;
+            this.tbBorrar.TextChanged += new System.EventHandler(this.tbBorrar_TextChanged);
             this.tbBorrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbBorrar_KeyDown);
             // 
             // label3

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionCongreso.exe" size="138208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AplicacionCongreso.exe" size="139744">
       <assemblyIdentity name="AplicacionCongreso" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WdA/eZzymQYhdkZxU/ijR0Lh8A51/bAlFCEO323zla4=</dsig:DigestValue>
+        <dsig:DigestValue>x5ynzbZZAnHKhN0Awg9I9FToO0s1o0bQeVIt4voWwiI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

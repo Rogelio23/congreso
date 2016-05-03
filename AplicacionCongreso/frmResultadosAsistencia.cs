@@ -41,5 +41,25 @@ namespace AplicacionCongreso
         {
             Herramientas.ExportarDataGridViewExcel(dgvAsistencia);
         }
+
+        private void cbEvento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void cbEvento_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cbEvento.Text) == false)
+            {
+                dgvAsistencia.DataSource = Controlador.ControladorVista.FillVistaAsistenciaConEvento(cbEvento.Text);
+                lblCantidad.Text = dgvAsistencia.RowCount.ToString();
+            }
+            else
+            {
+                dgvAsistencia.DataSource = Controlador.ControladorVista.FillVistaAsistencia();
+                lblCantidad.Text = dgvAsistencia.RowCount.ToString();
+            }
+        }
     }
 }
