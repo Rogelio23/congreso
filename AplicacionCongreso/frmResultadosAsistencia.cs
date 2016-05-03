@@ -36,5 +36,10 @@ namespace AplicacionCongreso
 
             }
         }
+
+        private void btnConvertir_Click(object sender, EventArgs e)
+        {
+            Herramientas.ExportarDataGridViewExcel(dgvAsistencia);
+        }
     }
 }

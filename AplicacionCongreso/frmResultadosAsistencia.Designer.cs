@@ -31,6 +31,7 @@
             this.dgvAsistencia = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
+            this.btnConvertir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,23 @@
             this.lblCantidad.TabIndex = 18;
             this.lblCantidad.Text = "25";
             // 
+            // btnConvertir
+            // 
+            this.btnConvertir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConvertir.Location = new System.Drawing.Point(479, 323);
+            this.btnConvertir.Name = "btnConvertir";
+            this.btnConvertir.Size = new System.Drawing.Size(199, 84);
+            this.btnConvertir.TabIndex = 20;
+            this.btnConvertir.Text = "Convertir a Excel";
+            this.btnConvertir.UseVisualStyleBackColor = true;
+            this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click);
+            // 
             // frmResultadosAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 429);
+            this.Controls.Add(this.btnConvertir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.dgvAsistencia);
@@ -89,5 +102,6 @@
         private System.Windows.Forms.DataGridView dgvAsistencia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Button btnConvertir;
     }
 }
