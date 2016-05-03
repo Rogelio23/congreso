@@ -33,12 +33,13 @@
             this.btnModificarParticipante = new System.Windows.Forms.Button();
             this.btnBorrarParticipante = new System.Windows.Forms.Button();
             this.btnTicket = new System.Windows.Forms.Button();
+            this.btnResultados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAisistencia
             // 
             this.btnAisistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAisistencia.Location = new System.Drawing.Point(132, 129);
+            this.btnAisistencia.Location = new System.Drawing.Point(49, 129);
             this.btnAisistencia.Name = "btnAisistencia";
             this.btnAisistencia.Size = new System.Drawing.Size(103, 55);
             this.btnAisistencia.TabIndex = 2;
@@ -49,7 +50,7 @@
             // btnNuevoParticipante
             // 
             this.btnNuevoParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoParticipante.Location = new System.Drawing.Point(249, 129);
+            this.btnNuevoParticipante.Location = new System.Drawing.Point(166, 129);
             this.btnNuevoParticipante.Name = "btnNuevoParticipante";
             this.btnNuevoParticipante.Size = new System.Drawing.Size(113, 55);
             this.btnNuevoParticipante.TabIndex = 4;
@@ -60,7 +61,7 @@
             // btnModificarParticipante
             // 
             this.btnModificarParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarParticipante.Location = new System.Drawing.Point(376, 129);
+            this.btnModificarParticipante.Location = new System.Drawing.Point(293, 129);
             this.btnModificarParticipante.Name = "btnModificarParticipante";
             this.btnModificarParticipante.Size = new System.Drawing.Size(103, 55);
             this.btnModificarParticipante.TabIndex = 5;
@@ -71,7 +72,7 @@
             // btnBorrarParticipante
             // 
             this.btnBorrarParticipante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarParticipante.Location = new System.Drawing.Point(493, 129);
+            this.btnBorrarParticipante.Location = new System.Drawing.Point(410, 129);
             this.btnBorrarParticipante.Name = "btnBorrarParticipante";
             this.btnBorrarParticipante.Size = new System.Drawing.Size(103, 55);
             this.btnBorrarParticipante.TabIndex = 6;
@@ -82,7 +83,7 @@
             // btnTicket
             // 
             this.btnTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTicket.Location = new System.Drawing.Point(610, 129);
+            this.btnTicket.Location = new System.Drawing.Point(527, 129);
             this.btnTicket.Name = "btnTicket";
             this.btnTicket.Size = new System.Drawing.Size(103, 55);
             this.btnTicket.TabIndex = 7;
@@ -90,11 +91,23 @@
             this.btnTicket.UseVisualStyleBackColor = true;
             this.btnTicket.Click += new System.EventHandler(this.btnTicket_Click);
             // 
+            // btnResultados
+            // 
+            this.btnResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnResultados.Location = new System.Drawing.Point(644, 129);
+            this.btnResultados.Name = "btnResultados";
+            this.btnResultados.Size = new System.Drawing.Size(114, 55);
+            this.btnResultados.TabIndex = 8;
+            this.btnResultados.Text = "Resultado de Asistencia:";
+            this.btnResultados.UseVisualStyleBackColor = true;
+            this.btnResultados.Click += new System.EventHandler(this.btnResultados_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 448);
+            this.Controls.Add(this.btnResultados);
             this.Controls.Add(this.btnTicket);
             this.Controls.Add(this.btnBorrarParticipante);
             this.Controls.Add(this.btnModificarParticipante);
@@ -113,6 +126,7 @@
         private System.Windows.Forms.Button btnModificarParticipante;
         private System.Windows.Forms.Button btnBorrarParticipante;
         private System.Windows.Forms.Button btnTicket;
+        private System.Windows.Forms.Button btnResultados;
     }
 }
 

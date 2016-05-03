@@ -88,10 +88,10 @@ namespace AplicacionCongreso.Controlador
         /// Metodo Fill que arroja todos los campos de la tabla de participantes
         /// </summary>
         /// <returns></returns>
-        public static List<Modelos.ModeloParticipante> FillParticipanteByNombre(string lastName)
+        public static List<Modelos.ModeloParticipante> FillParticipanteByNombre(string xName)
         {
             List<Modelos.ModeloParticipante> lista = new List<Modelos.ModeloParticipante>();
-            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM  wp_evr_attendee WHERE event_id='2' and lname like '%" + lastName+"%'"), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM  wp_evr_attendee WHERE event_id='2' and (lname like '%" + xName+ "%' or fname like '%" + xName + "%')"), ConectionString.ObtenerConexion());
             MySqlDataReader datos = comando.ExecuteReader();
             //todos los datos de la consulta select son arrojados dentro de un objeto tipo MySQLcommand
             //con el while son introducidos dentro de una lista que servira para rellenar el datagridview
