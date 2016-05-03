@@ -21,6 +21,7 @@ namespace AplicacionCongreso
         {
             //dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
             dgvAsistencia.DataSource = Controlador.ControladorVista.FillVistaAsistencia();
+            lblCantidad.Text = dgvAsistencia.RowCount.ToString();
         }
 
         private void dgvAsistencia_Validating(object sender, CancelEventArgs e)

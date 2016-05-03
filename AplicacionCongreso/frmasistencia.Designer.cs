@@ -153,9 +153,8 @@
             "Día 1",
             "Día 2",
             "Día 3",
-            "Taller de preparación de zona de aterrizaje para ambulancia de ala rotativa e int" +
-                "eracción del personal de tierra.",
-            "Taller para la implementación de programa interno de protección civil"});
+            "Taller de preparación de zona",
+            "Taller para la implementación"});
             this.cbEvento.Location = new System.Drawing.Point(98, 71);
             this.cbEvento.Name = "cbEvento";
             this.cbEvento.Size = new System.Drawing.Size(739, 32);

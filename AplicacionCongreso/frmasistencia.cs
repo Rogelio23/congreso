@@ -119,7 +119,18 @@ namespace AplicacionCongreso
                         asistencia.evento = cbEvento.SelectedItem.ToString();
                         asistencia.congreso = "CongresoParamedicos";
                         Controlador.ControladorAsistencia.agregarParticipante(asistencia);
-                        tbLectora.Text = ""; 
+                        tbLectora.Text = "";
+                        lblCantidad.Text = Controlador.ControladorAsistencia.contarAsistencia(cbEvento.Text).ToString();
+                        int label = int.Parse(lblCantidad.Text);
+                        int texbox = int.Parse(tbCantidad.Text);
+                        if (label >= texbox)
+                        {
+                            lblCantidad.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            lblCantidad.ForeColor = Color.Black;
+                        }
                     }
                     else
                     {
@@ -149,6 +160,16 @@ namespace AplicacionCongreso
         private void cbEvento_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblCantidad.Text = Controlador.ControladorAsistencia.contarAsistencia(cbEvento.Text).ToString();
+            int label = int.Parse(lblCantidad.Text);
+            int texbox = int.Parse(tbCantidad.Text);
+            if (label >= texbox)
+            {
+                lblCantidad.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblCantidad.ForeColor = Color.Black;
+            }
         }
 
         private void tbCantidad_TextChanged(object sender, EventArgs e)

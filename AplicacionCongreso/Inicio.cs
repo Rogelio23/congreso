@@ -30,7 +30,7 @@ namespace AplicacionCongreso
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             frmasistencia ventanaDeAsistencia = new frmasistencia();
-            ventanaDeAsistencia.ShowDialog();
+            ventanaDeAsistencia.Show();
         }
 
         private void dgvParticipante_DoubleClick(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace AplicacionCongreso
         private void btnTicket_Click(object sender, EventArgs e)
         {
             frmImpresionTickets ventanaDeImprmirTickets = new frmImpresionTickets();
-            ventanaDeImprmirTickets.ShowDialog();
+            ventanaDeImprmirTickets.Show();
         }
 
         private void btnResultados_Click(object sender, EventArgs e)

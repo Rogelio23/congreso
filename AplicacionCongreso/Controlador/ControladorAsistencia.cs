@@ -41,7 +41,7 @@ namespace AplicacionCongreso.Controlador
         {
             int intCantidad = 0;
             
-            MySqlCommand comando = new MySqlCommand(string.Format("select count(*) as contador from AsistenciaEventos where congreso='CongresoParamedicos' and evento='"+nomEvento+"'"), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("select count(*) as contador from AsistenciaEventos where congreso='CongresoParamedicos' and evento like '%"+nomEvento+"%'"), ConectionString.ObtenerConexion());
             //intCantidad = comando.ExecuteNonQuery();
             intCantidad = Convert.ToInt32(comando.ExecuteScalar());
             
