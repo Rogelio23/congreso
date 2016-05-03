@@ -37,6 +37,16 @@ namespace AplicacionCongreso.Controlador
             if (query != 0) { resultado = true; }
             return resultado;
         }
+        public static int contarAsistencia(string nomEvento)
+        {
+            int intCantidad = 0;
+            
+            MySqlCommand comando = new MySqlCommand(string.Format("select count(*) as contador from AsistenciaEventos where congreso='CongresoParamedicos' and evento='"+nomEvento+"'"), ConectionString.ObtenerConexion());
+            //intCantidad = comando.ExecuteNonQuery();
+            intCantidad = Convert.ToInt32(comando.ExecuteScalar());
+            
+            return intCantidad;
+        }
 
     }
 }

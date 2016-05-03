@@ -41,6 +41,9 @@
             this.cbEvento = new System.Windows.Forms.ComboBox();
             this.tbBorrar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbCantidad = new System.Windows.Forms.TextBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParticipante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
@@ -178,11 +181,46 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Borrar:";
             // 
+            // tbCantidad
+            // 
+            this.tbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCantidad.Location = new System.Drawing.Point(731, 16);
+            this.tbCantidad.Multiline = true;
+            this.tbCantidad.Name = "tbCantidad";
+            this.tbCantidad.Size = new System.Drawing.Size(106, 49);
+            this.tbCantidad.TabIndex = 15;
+            this.tbCantidad.TextChanged += new System.EventHandler(this.tbCantidad_TextChanged);
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(730, 406);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(107, 76);
+            this.lblCantidad.TabIndex = 16;
+            this.lblCantidad.Text = "25";
+            this.lblCantidad.TextChanged += new System.EventHandler(this.lblCantidad_TextChanged);
+            this.lblCantidad.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(739, 385);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 24);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Cantidad:";
+            // 
             // frmasistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 511);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCantidad);
+            this.Controls.Add(this.tbCantidad);
             this.Controls.Add(this.tbBorrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbEvento);
@@ -218,5 +256,8 @@
         private System.Windows.Forms.ComboBox cbEvento;
         private System.Windows.Forms.TextBox tbBorrar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbCantidad;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label label4;
     }
 }

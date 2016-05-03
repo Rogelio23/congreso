@@ -21,6 +21,7 @@ namespace AplicacionCongreso
         private void frmasistencia_Load(object sender, EventArgs e)
         {
             dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
+            tbCantidad.Text = "0";
         }
 
         private void btnLectora_Click(object sender, EventArgs e)
@@ -147,7 +148,25 @@ namespace AplicacionCongreso
 
         private void cbEvento_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblCantidad.Text = Controlador.ControladorAsistencia.contarAsistencia(cbEvento.Text).ToString();
+        }
 
+        private void tbCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCantidad_TextChanged(object sender, EventArgs e)
+        {
+            if(tbCantidad.Text!="0" && lblCantidad.Text == tbCantidad.Text)
+            {
+                lblCantidad.ForeColor = Color.Red;
+            }
         }
     }
 }

@@ -37,11 +37,11 @@
             this.dgvAsistencia.AllowUserToAddRows = false;
             this.dgvAsistencia.AllowUserToDeleteRows = false;
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsistencia.Location = new System.Drawing.Point(71, 26);
+            this.dgvAsistencia.Location = new System.Drawing.Point(25, 26);
             this.dgvAsistencia.Name = "dgvAsistencia";
             this.dgvAsistencia.ReadOnly = true;
             this.dgvAsistencia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAsistencia.Size = new System.Drawing.Size(405, 263);
+            this.dgvAsistencia.Size = new System.Drawing.Size(389, 263);
             this.dgvAsistencia.TabIndex = 2;
             this.dgvAsistencia.Validating += new System.ComponentModel.CancelEventHandler(this.dgvAsistencia_Validating);
             // 
@@ -49,7 +49,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 315);
+            this.ClientSize = new System.Drawing.Size(438, 351);
             this.Controls.Add(this.dgvAsistencia);
             this.Name = "frmResultadosAsistencia";
             this.Text = "frmResultadosAsistencia";
