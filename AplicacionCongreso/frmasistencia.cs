@@ -21,6 +21,7 @@ namespace AplicacionCongreso
         private void frmasistencia_Load(object sender, EventArgs e)
         {
             dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
+            tbCantidad.Text = "0";
         }
 
         private void btnLectora_Click(object sender, EventArgs e)
@@ -110,13 +111,32 @@ namespace AplicacionCongreso
                 //Capture the text
                 if (sender is TextBox)
                 {
-                    tbParticipante.Text = tbLectora.Text;
-                    Modelos.ModeloAsistencia asistencia = new Modelos.ModeloAsistencia();
-                    asistencia.participante = int.Parse(tbParticipante.Text);
-                    asistencia.evento = cbEvento.SelectedItem.ToString();
-                    asistencia.congreso = "CongresoParamedicos";
-                    Controlador.ControladorAsistencia.agregarParticipante(asistencia);
-                    tbLectora.Text = "";
+                    if (string.IsNullOrWhiteSpace(cbEvento.Text)==false)
+                    {
+                        tbParticipante.Text = tbLectora.Text;
+                        Modelos.ModeloAsistencia asistencia = new Modelos.ModeloAsistencia();
+                        asistencia.participante = int.Parse(tbParticipante.Text);
+                        asistencia.evento = cbEvento.SelectedItem.ToString();
+                        asistencia.congreso = "CongresoParamedicos";
+                        Controlador.ControladorAsistencia.agregarParticipante(asistencia);
+                        tbLectora.Text = "";
+                        lblCantidad.Text = Controlador.ControladorAsistencia.contarAsistencia(cbEvento.Text).ToString();
+                        int label = int.Parse(lblCantidad.Text);
+                        int texbox = int.Parse(tbCantidad.Text);
+                        if (label >= texbox)
+                        {
+                            lblCantidad.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            lblCantidad.ForeColor = Color.Black;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una opcion en el evento");
+                        tbLectora.Text = "";
+                    }
                 }
             }
         }
@@ -139,7 +159,35 @@ namespace AplicacionCongreso
 
         private void cbEvento_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lblCantidad.Text = Controlador.ControladorAsistencia.contarAsistencia(cbEvento.Text).ToString();
+            int label = int.Parse(lblCantidad.Text);
+            int texbox = int.Parse(tbCantidad.Text);
+            if (label >= texbox)
+            {
+                lblCantidad.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblCantidad.ForeColor = Color.Black;
+            }
+        }
 
+        private void tbCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCantidad_TextChanged(object sender, EventArgs e)
+        {
+            if(tbCantidad.Text!="0" && lblCantidad.Text == tbCantidad.Text)
+            {
+                lblCantidad.ForeColor = Color.Red;
+            }
         }
     }
 }
