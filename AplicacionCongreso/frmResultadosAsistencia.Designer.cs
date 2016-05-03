@@ -43,6 +43,7 @@
             this.dgvAsistencia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAsistencia.Size = new System.Drawing.Size(405, 263);
             this.dgvAsistencia.TabIndex = 2;
+            this.dgvAsistencia.Validating += new System.ComponentModel.CancelEventHandler(this.dgvAsistencia_Validating);
             // 
             // frmResultadosAsistencia
             // 

@@ -16,7 +16,7 @@ namespace AplicacionCongreso.Controlador
         public static List<Modelos.ModeloVistaAsistencia> FillVistaAsistencia()
         {
             List<Modelos.ModeloVistaAsistencia> lista = new List<Modelos.ModeloVistaAsistencia>();
-            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM vistaAsitentesCongreso;"), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("SELECT * FROM vistaAsitentesCongreso where event_id=2;"), ConectionString.ObtenerConexion());
             MySqlDataReader datos = comando.ExecuteReader();
             //todos los datos de la consulta select son arrojados dentro de un objeto tipo MySQLcommand
             //con el while son introducidos dentro de una lista que servira para rellenar el datagridview
@@ -24,10 +24,20 @@ namespace AplicacionCongreso.Controlador
             {
                 
                 Modelos.ModeloVistaAsistencia vista = new Modelos.ModeloVistaAsistencia();
+                
                 vista.lname = datos.GetString(0);
                 vista.fname = datos.GetString(1);
                 vista.event_id = datos.GetString(2);
-                vista.evento = datos.GetString(3);
+                //vista.evento = datos.GetString(3);
+                try
+                {
+                    vista.evento = datos.GetString(3);
+                }
+                catch (Exception)
+                {
+
+                    vista.evento = "_";
+                }
                 lista.Add(vista);
                                 
             }

@@ -22,5 +22,18 @@ namespace AplicacionCongreso
             //dgvParticipante.DataSource = Controlador.ControladorParticipante.FillParticipante();
             dgvAsistencia.DataSource = Controlador.ControladorVista.FillVistaAsistencia();
         }
+
+        private void dgvAsistencia_Validating(object sender, CancelEventArgs e)
+        {
+            DataGridViewRow row = dgvAsistencia.CurrentRow as DataGridViewRow;
+
+            if (row.Cells[0].Value == DBNull.Value)
+            {
+
+                dgvAsistencia.CancelEdit();
+                e.Cancel = true;
+
+            }
+        }
     }
 }
