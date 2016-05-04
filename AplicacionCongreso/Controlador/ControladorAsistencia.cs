@@ -32,7 +32,7 @@ namespace AplicacionCongreso.Controlador
         public static bool eliminarAsistencia(int participanteid, string nomEvento)
         {
             bool resultado = false;
-            MySqlCommand comando = new MySqlCommand(string.Format("Delete from AsistenciaEventos where participanteID="+participanteid+" AND evento='"+nomEvento+"'"), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete from AsistenciaEventos where participanteID="+participanteid+" AND evento like '%"+nomEvento+"%'"), ConectionString.ObtenerConexion());
             int query = comando.ExecuteNonQuery();
             if (query != 0) { resultado = true; }
             return resultado;
@@ -47,6 +47,7 @@ namespace AplicacionCongreso.Controlador
             
             return intCantidad;
         }
+
 
     }
 }

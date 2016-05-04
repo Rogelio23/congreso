@@ -59,6 +59,7 @@ namespace AplicacionCongreso
                     participante.phone = tbTelefono.Text;
                     participante.email = tbCorreo.Text;
                     participante.city = tbCiudad.Text;
+                    participante.state = tbEstado.Text;
 
                     bool agregar = Controlador.ControladorParticipante.agregarParticipante(participante);
                     if (agregar == true)
@@ -79,7 +80,32 @@ namespace AplicacionCongreso
             {
                 if (validacionParticipante()==true)
                 {
-                    MessageBox.Show("Usted esta modificando"); 
+                    Modelos.ModeloParticipante participante = new Modelos.ModeloParticipante();
+                    participante.ID = int.Parse(tbParticipanteID.Text);
+                    participante.lname = tbApellido.Text;
+                    participante.fname = tbNombre.Text;
+                    participante.email = tbCorreo.Text;
+                    participante.state = tbEstado.Text;
+                    participante.city = tbCiudad.Text;
+                    participante.phone = tbTelefono.Text;
+                    bool resultadoQuery = Controlador.ControladorParticipante.modificareParticipante(participante);
+
+                    if (resultadoQuery==true)
+                    {
+                        MessageBox.Show("Usted esta modificando");
+                        tbApellido.Text = "";
+                        tbNombre.Text = "";
+                        tbCiudad.Text = "";
+                        tbCorreo.Text = "";
+                        tbParticipanteID.Text = "";
+                        tbEstado.Text = "";
+                        tbTelefono.Text = "";
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Existe algun error, compruebe la red");
+                    }
                 }
                 else
                 {
@@ -160,6 +186,7 @@ namespace AplicacionCongreso
                     tbTelefono.Text = participante.phone;
                     tbCorreo.Text = participante.email;
                     tbCiudad.Text = participante.city;
+                    tbEstado.Text = participante.state;
                 }
             }
         }

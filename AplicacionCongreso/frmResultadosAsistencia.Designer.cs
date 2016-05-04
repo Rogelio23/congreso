@@ -32,6 +32,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnConvertir = new System.Windows.Forms.Button();
+            this.cbEvento = new System.Windows.Forms.ComboBox();
+            this.lblEvento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +42,7 @@
             this.dgvAsistencia.AllowUserToAddRows = false;
             this.dgvAsistencia.AllowUserToDeleteRows = false;
             this.dgvAsistencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAsistencia.Location = new System.Drawing.Point(25, 26);
+            this.dgvAsistencia.Location = new System.Drawing.Point(33, 87);
             this.dgvAsistencia.Name = "dgvAsistencia";
             this.dgvAsistencia.ReadOnly = true;
             this.dgvAsistencia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -52,7 +54,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(293, 323);
+            this.label4.Location = new System.Drawing.Point(301, 384);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 24);
             this.label4.TabIndex = 19;
@@ -62,7 +64,7 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(284, 344);
+            this.lblCantidad.Location = new System.Drawing.Point(292, 405);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(107, 76);
             this.lblCantidad.TabIndex = 18;
@@ -71,7 +73,7 @@
             // btnConvertir
             // 
             this.btnConvertir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConvertir.Location = new System.Drawing.Point(479, 323);
+            this.btnConvertir.Location = new System.Drawing.Point(487, 384);
             this.btnConvertir.Name = "btnConvertir";
             this.btnConvertir.Size = new System.Drawing.Size(199, 84);
             this.btnConvertir.TabIndex = 20;
@@ -79,11 +81,41 @@
             this.btnConvertir.UseVisualStyleBackColor = true;
             this.btnConvertir.Click += new System.EventHandler(this.btnConvertir_Click);
             // 
+            // cbEvento
+            // 
+            this.cbEvento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEvento.FormattingEnabled = true;
+            this.cbEvento.Items.AddRange(new object[] {
+            "Día 1",
+            "Día 2",
+            "Día 3",
+            "Taller de preparación de zona",
+            "Taller para la implementación"});
+            this.cbEvento.Location = new System.Drawing.Point(116, 30);
+            this.cbEvento.Name = "cbEvento";
+            this.cbEvento.Size = new System.Drawing.Size(641, 32);
+            this.cbEvento.TabIndex = 22;
+            this.cbEvento.SelectedIndexChanged += new System.EventHandler(this.cbEvento_SelectedIndexChanged);
+            this.cbEvento.TextChanged += new System.EventHandler(this.cbEvento_TextChanged);
+            // 
+            // lblEvento
+            // 
+            this.lblEvento.AutoSize = true;
+            this.lblEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvento.Location = new System.Drawing.Point(36, 33);
+            this.lblEvento.Name = "lblEvento";
+            this.lblEvento.Size = new System.Drawing.Size(74, 24);
+            this.lblEvento.TabIndex = 21;
+            this.lblEvento.Text = "Evento:";
+            // 
             // frmResultadosAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 429);
+            this.ClientSize = new System.Drawing.Size(790, 509);
+            this.Controls.Add(this.cbEvento);
+            this.Controls.Add(this.lblEvento);
             this.Controls.Add(this.btnConvertir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblCantidad);
@@ -103,5 +135,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Button btnConvertir;
+        private System.Windows.Forms.ComboBox cbEvento;
+        private System.Windows.Forms.Label lblEvento;
     }
 }

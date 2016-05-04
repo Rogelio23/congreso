@@ -41,6 +41,8 @@
             this.lblParticipanteID = new System.Windows.Forms.Label();
             this.tbCiudad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbEstado = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbNombre
@@ -119,7 +121,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(131, 310);
+            this.btnGuardar.Location = new System.Drawing.Point(136, 366);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(137, 49);
             this.btnGuardar.TabIndex = 14;
@@ -167,11 +169,31 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Ciudad Participante";
             // 
+            // tbEstado
+            // 
+            this.tbEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEstado.Location = new System.Drawing.Point(203, 294);
+            this.tbEstado.Name = "tbEstado";
+            this.tbEstado.Size = new System.Drawing.Size(185, 26);
+            this.tbEstado.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 297);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 20);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Estado Participante";
+            // 
             // frmParticipante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 371);
+            this.ClientSize = new System.Drawing.Size(410, 440);
+            this.Controls.Add(this.tbEstado);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbCiudad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGuardar);
@@ -207,5 +229,7 @@
         private System.Windows.Forms.Label lblParticipanteID;
         private System.Windows.Forms.TextBox tbCiudad;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbEstado;
+        private System.Windows.Forms.Label label3;
     }
 }
