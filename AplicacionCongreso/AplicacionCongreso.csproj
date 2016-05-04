@@ -247,6 +247,7 @@
     </Compile>
     <Compile Include="Modelos\ModeloAsistencia.cs" />
     <Compile Include="Modelos\ModeloParticipante.cs" />
+    <Compile Include="Modelos\ModeloReporteAsistencia.cs" />
     <Compile Include="Modelos\ModeloVistaAsistencia.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
