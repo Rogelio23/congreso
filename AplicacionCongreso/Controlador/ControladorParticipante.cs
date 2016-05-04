@@ -54,6 +54,7 @@ namespace AplicacionCongreso.Controlador
                     participante.fname = datos.GetString(2);
                     participante.email = datos.GetString(3);
                     participante.city = datos.GetString(4);
+                    participante.state = datos.GetString(5);
 
                     lista.Add(participante);
                 //}
@@ -78,6 +79,7 @@ namespace AplicacionCongreso.Controlador
                 participante.phone = datos.GetString(9);
                 participante.email = datos.GetString(8);
                 participante.city = datos.GetString(4);
+                participante.state = datos.GetString(5);
                 
             }
             ConectionString.ObtenerConexion().Close();
@@ -103,6 +105,7 @@ namespace AplicacionCongreso.Controlador
                 participante.fname = datos.GetString(2);
                 participante.address = datos.GetString(3);
                 participante.city = datos.GetString(4);
+                participante.state = datos.GetString(5);
 
 
                 lista.Add(participante);
@@ -113,8 +116,7 @@ namespace AplicacionCongreso.Controlador
         {
 
             bool resultado = false;
-            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE wp_evr_attendee (fname, lname,phone,email, event_id, city) values ('{0}','{1}','{2}', '{3}','{4}','{5}')",
-               participante.fname, participante.lname, participante.phone, participante.email, 2, participante.city), ConectionString.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE wp_evr_attendee set lname='"+participante.lname+"',fname='"+participante.fname+"',city='"+participante.city+"',state='"+participante.state+"',phone='"+participante.phone+"',email='"+participante.email+ "' where id="+participante.ID+";"), ConectionString.ObtenerConexion());
             int query = comando.ExecuteNonQuery();
             if (query != 0) { resultado = true; }
             return resultado;
